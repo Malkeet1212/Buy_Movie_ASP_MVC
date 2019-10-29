@@ -1,0 +1,30 @@
+﻿@model BuyMovies.Business.Comment
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Comment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customer.CustomerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CommentText)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CommentText)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

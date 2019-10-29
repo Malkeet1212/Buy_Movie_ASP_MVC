@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Buy Movies</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="~/Content/css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <partial name="_LoginPartial.cshtml"/>
+    </nav>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading bg-dark text-light" style="font-weight:600">BuyMovies.com </div>
+            <div class="list-group list-group-flush">
+                <a href="/" class="btn btn-info">Home</a>
+                <a href="/Movies/" class="btn btn-info">Movies</a>
+                <a href="/Customers/" class="btn btn-info">Customers</a>
+                <a href="/MovieTransactions/" class="btn btn-info">Movie Sales Transactions</a>
+                <a href="/Comments/" class="btn btn-info">Comments</a>
+                <a style="height:100vh;background-size:cover;background-image:url('/Content/images/movie.jpg')" asp-page="/Comments/Index" class="btn btn-info"></a>
+
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+
+
+
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </div>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="~/Content/vendor/jquery/jquery.min.js"></script>
+        <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Menu Toggle Script -->
+        <script>
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+        @RenderSection("Scripts", required: false)
+
+</body>
+
+</html>
